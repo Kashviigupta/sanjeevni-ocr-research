@@ -1,0 +1,46 @@
+{
+  "clinic": "Anand Wellness Centre",
+  "doctor": "Dr. S. Deshmukh",
+  "patient": "Lakshmi Bai",
+  "age": 47,
+  "sex": "F",
+  "date": "12/09/2026",
+  "handwritten": false,
+  "drugs": [
+    {
+      "brand": "Levocet",
+      "generic": "levocetirizine",
+      "strength": "5mg",
+      "sig": "0-0-1",
+      "duration": "7 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Telma",
+      "generic": "telmisartan",
+      "strength": "40mg",
+      "sig": "1-0-0",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Pantocid",
+      "generic": "pantoprazole",
+      "strength": "40mg",
+      "sig": "1-0-0",
+      "duration": "14 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Azithral",
+      "generic": "azithromycin",
+      "strength": "500mg",
+      "sig": "1-0-0",
+      "duration": "3 days",
+      "form": "Tab"
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "phone_flash"
+}

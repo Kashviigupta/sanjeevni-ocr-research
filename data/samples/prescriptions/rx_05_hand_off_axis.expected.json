@@ -1,0 +1,46 @@
+{
+  "clinic": "Shanti General Clinic",
+  "doctor": "Dr. A. K. Bhattacharya",
+  "patient": "Imran Sheikh",
+  "age": 33,
+  "sex": "M",
+  "date": "10/07/2026",
+  "handwritten": true,
+  "drugs": [
+    {
+      "brand": "Zerodol",
+      "generic": "aceclofenac",
+      "strength": "100mg",
+      "sig": "1-0-1",
+      "duration": "5 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Flagyl",
+      "generic": "metronidazole",
+      "strength": "400mg",
+      "sig": "1-1-1",
+      "duration": "5 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Levocet",
+      "generic": "levocetirizine",
+      "strength": "5mg",
+      "sig": "0-0-1",
+      "duration": "7 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Crocin",
+      "generic": "paracetamol",
+      "strength": "650mg",
+      "sig": "1-1-1",
+      "duration": "5 days",
+      "form": null
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "off_axis"
+}

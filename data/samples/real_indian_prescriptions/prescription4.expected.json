@@ -1,0 +1,7 @@
+{
+  "source": "Unlabelled clinic slip, dated 13/4/26",
+  "document_type": "prescription",
+  "diagnoses": ["Tennis elbow"],
+  "drugs": ["Inmecin", "Tyzocam", "Abex", "Phellon", "Thrombophob"],
+  "notes": "Tyzocam strength written as (6); Abex strength 20; Thrombophob is a topical gel. Confirmed by user."
+}

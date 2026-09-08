@@ -1,0 +1,38 @@
+{
+  "clinic": "Shanti General Clinic",
+  "doctor": "Dr. Priya Nair",
+  "patient": "Imran Sheikh",
+  "age": 33,
+  "sex": "M",
+  "date": "13/03/2026",
+  "handwritten": true,
+  "drugs": [
+    {
+      "brand": "Atorva",
+      "generic": "atorvastatin",
+      "strength": "10mg",
+      "sig": "0-0-1",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Levocet",
+      "generic": "levocetirizine",
+      "strength": "5mg",
+      "sig": "0-0-1",
+      "duration": "7 days",
+      "form": null
+    },
+    {
+      "brand": "Azithral",
+      "generic": "azithromycin",
+      "strength": "500mg",
+      "sig": "1-0-0",
+      "duration": "3 days",
+      "form": "Tab"
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "low_light"
+}

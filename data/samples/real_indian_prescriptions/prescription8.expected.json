@@ -1,0 +1,7 @@
+{
+  "source": "Sanjeevani Diagnostic, Dr. Mitra (M.D.)",
+  "document_type": "prescription",
+  "diagnoses": ["Cough", "PIA (likely 'pain in abdomen')"],
+  "drugs": ["Zipod", "Alex-P", "Imol"],
+  "notes": "All three are syrups (Syp). Zipod 50mg dosing 5ml-5ml x5 days; Alex-P 25ml-25ml x5 days; Imol 3ml-3ml-3ml (three-times-daily). Liver/spleen examination findings also noted -- not drugs."
+}

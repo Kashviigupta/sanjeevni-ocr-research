@@ -1,0 +1,34 @@
+# --- service ------------------------------------------------------------------
+fastapi>=0.115
+uvicorn[standard]>=0.30
+pydantic>=2.7
+pydantic-settings>=2.3
+python-multipart>=0.0.9
+
+# --- OCR (Mahek) --------------------------------------------------------------
+# pytesseract is a wrapper, NOT the OCR engine. Install the tesseract binary
+# separately - see README. Add tesseract-ocr-hin for Devanagari documents.
+pytesseract>=0.3.10
+pillow>=10.3
+opencv-python-headless>=4.10
+numpy>=1.26
+# Rasterises PDF uploads with no system dependency (unlike pdf2image + poppler).
+PyMuPDF>=1.24
+
+# --- extraction & terminology (Kashvi) ----------------------------------------
+python-dateutil>=2.9
+rapidfuzz>=3.9
+
+# --- optional: vision model for handwriting -----------------------------------
+# Used ONLY when ANTHROPIC_API_KEY is set. The offline path must always work.
+anthropic>=0.40
+
+# --- dev ----------------------------------------------------------------------
+pytest>=8.0
+httpx>=0.27
+
+# Bhashini ASR/TTS and the triage webhook both call out over HTTP. This was imported
+# by redflags/alert.py and speech/bhashini_client.py long before it was declared - the
+# container only survived because nothing imported either at startup. Adding the speech
+# endpoints made that import eager and the service stopped booting.
+requests>=2.32,<3

@@ -1,0 +1,8 @@
+{
+  "source": "Aarogyam Health Clinic",
+  "document_type": "lab_requisition",
+  "diagnoses": [],
+  "drugs": [],
+  "lab_tests": ["CBC", "CRP", "SGOT", "SGPT"],
+  "notes": "Not a medication prescription -- a lab test order marked Urgent. Ground truth here is the requested tests, not drugs."
+}

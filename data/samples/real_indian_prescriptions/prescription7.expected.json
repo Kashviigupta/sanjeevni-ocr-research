@@ -1,0 +1,7 @@
+{
+  "source": "Dr. Ishnavi Patel, Shop No 5, Prashant Apt, Opp IIT Main Gate",
+  "document_type": "prescription",
+  "diagnoses": ["Loose motion since yesterday with spasmodic pain and vomiting"],
+  "drugs": ["Flagyl", "Dootin M", "Pan", "Dyril", "Electral powder"],
+  "notes": "Flagyl 400. Pan 40. Dyril 2mg. An earlier drug (Oflox) is visibly struck through/cancelled on the slip -- ground truth excludes it since it was not actually prescribed. Electral powder marked SOS (as needed)."
+}

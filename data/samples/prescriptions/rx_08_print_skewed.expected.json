@@ -1,0 +1,46 @@
+{
+  "clinic": "Sunrise Polyclinic",
+  "doctor": "Dr. Priya Nair",
+  "patient": "Anita Deshpande",
+  "age": 61,
+  "sex": "F",
+  "date": "09/06/2026",
+  "handwritten": false,
+  "drugs": [
+    {
+      "brand": "Pantocid",
+      "generic": "pantoprazole",
+      "strength": "40mg",
+      "sig": "1-0-0",
+      "duration": "14 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Domstal",
+      "generic": "domperidone",
+      "strength": "10mg",
+      "sig": "1-1-1",
+      "duration": "3 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Ecosprin",
+      "generic": "aspirin",
+      "strength": "75mg",
+      "sig": "0-1-0",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Telma",
+      "generic": "telmisartan",
+      "strength": "40mg",
+      "sig": "1-0-0",
+      "duration": "30 days",
+      "form": "Tab"
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "skewed"
+}

@@ -1,0 +1,54 @@
+{
+  "clinic": "Sunrise Polyclinic",
+  "doctor": "Dr. R. Venkatesan",
+  "patient": "Anita Deshpande",
+  "age": 61,
+  "sex": "F",
+  "date": "26/05/2026",
+  "handwritten": true,
+  "drugs": [
+    {
+      "brand": "Asthalin",
+      "generic": "salbutamol",
+      "strength": "2mg",
+      "sig": "1-1-1",
+      "duration": "7 days",
+      "form": "Syp"
+    },
+    {
+      "brand": "Levocet",
+      "generic": "levocetirizine",
+      "strength": "5mg",
+      "sig": "0-0-1",
+      "duration": "7 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Telma",
+      "generic": "telmisartan",
+      "strength": "40mg",
+      "sig": "1-0-0",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Mox",
+      "generic": "amoxicillin",
+      "strength": "500mg",
+      "sig": "1-1-1",
+      "duration": "7 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Emeset",
+      "generic": "ondansetron",
+      "strength": "4mg",
+      "sig": "SOS",
+      "duration": "3 days",
+      "form": "Tab"
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "clean"
+}

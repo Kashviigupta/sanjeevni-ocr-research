@@ -1,0 +1,46 @@
+{
+  "clinic": "Shanti General Clinic",
+  "doctor": "Dr. Priya Nair",
+  "patient": "Ramesh Kumar",
+  "age": 54,
+  "sex": "M",
+  "date": "21/03/2026",
+  "handwritten": true,
+  "drugs": [
+    {
+      "brand": "Ecosprin",
+      "generic": "aspirin",
+      "strength": "75mg",
+      "sig": "0-1-0",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Crocin",
+      "generic": "paracetamol",
+      "strength": "650mg",
+      "sig": "1-1-1",
+      "duration": "5 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Decdan",
+      "generic": "dexamethasone",
+      "strength": "0.5mg",
+      "sig": "1-0-1",
+      "duration": "3 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Amlong",
+      "generic": "amlodipine",
+      "strength": "5mg",
+      "sig": "0-0-1",
+      "duration": "30 days",
+      "form": "Tab"
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "clean"
+}

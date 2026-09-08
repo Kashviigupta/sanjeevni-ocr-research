@@ -1,0 +1,7 @@
+{
+  "source": "SevenHills HealthCity, Mumbai",
+  "document_type": "prescription",
+  "diagnoses": ["Dyslipidemia", "Type 2 DM", "Hyperuricemia"],
+  "drugs": ["Rosuvas F", "Glycomet SR", "Febustat"],
+  "notes": "Rosuvas F strength shown as 10/150; Glycomet SR 1gm; Febustat 40. Frequencies handwritten as fraction-style dosing, not transcribed as separate fields here."
+}

@@ -1,0 +1,38 @@
+{
+  "clinic": "Anand Wellness Centre",
+  "doctor": "Dr. R. Venkatesan",
+  "patient": "Sunita Yadav",
+  "age": 39,
+  "sex": "F",
+  "date": "18/10/2026",
+  "handwritten": true,
+  "drugs": [
+    {
+      "brand": "Montair",
+      "generic": "montelukast",
+      "strength": "10mg",
+      "sig": "0-0-1",
+      "duration": "30 days",
+      "form": null
+    },
+    {
+      "brand": "Clopilet",
+      "generic": "clopidogrel",
+      "strength": "75mg",
+      "sig": "0-1-0",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Levocet",
+      "generic": "levocetirizine",
+      "strength": "5mg",
+      "sig": "0-0-1",
+      "duration": "7 days",
+      "form": "Tab"
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "folded"
+}

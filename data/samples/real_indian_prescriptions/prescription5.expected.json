@@ -1,0 +1,7 @@
+{
+  "source": "Unlabelled clinic slip, dated 2/11/23",
+  "document_type": "prescription",
+  "diagnoses": ["Ankle sprain (3 weeks old)"],
+  "drugs": ["Enzomov", "Parazil", "Rabemac", "Ankler"],
+  "notes": "Rabemac strength 20. Ankler is a topical (x1 applied externally). X-ray of ankle also ordered (AP/lateral views) -- not a drug."
+}

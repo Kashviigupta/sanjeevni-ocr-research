@@ -1,0 +1,54 @@
+{
+  "clinic": "Shanti General Clinic",
+  "doctor": "Dr. R. Venkatesan",
+  "patient": "Imran Sheikh",
+  "age": 33,
+  "sex": "M",
+  "date": "03/11/2026",
+  "handwritten": true,
+  "drugs": [
+    {
+      "brand": "Pantocid",
+      "generic": "pantoprazole",
+      "strength": "40mg",
+      "sig": "1-0-0",
+      "duration": "14 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Azithral",
+      "generic": "azithromycin",
+      "strength": "500mg",
+      "sig": "1-0-0",
+      "duration": "3 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Emeset",
+      "generic": "ondansetron",
+      "strength": "4mg",
+      "sig": "SOS",
+      "duration": "3 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Ecosprin",
+      "generic": "aspirin",
+      "strength": "75mg",
+      "sig": "0-1-0",
+      "duration": "30 days",
+      "form": "Tab"
+    },
+    {
+      "brand": "Atorva",
+      "generic": "atorvastatin",
+      "strength": "10mg",
+      "sig": "0-0-1",
+      "duration": "30 days",
+      "form": null
+    }
+  ],
+  "synthetic": true,
+  "note": "Fully invented. Safe for hosted vision models; contains no real patient data.",
+  "condition": "skewed"
+}
