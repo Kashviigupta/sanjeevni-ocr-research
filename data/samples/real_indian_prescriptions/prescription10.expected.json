@@ -1,0 +1,7 @@
+{
+  "source": "Unlabelled clinic slip",
+  "document_type": "prescription",
+  "diagnoses": ["V1/V2 Neuralgia, acute exacerbation"],
+  "drugs": ["Oxetol 450", "Gabapin NT 400/10", "Ultrafast 30", "Pantoth DR"],
+  "notes": "Pantoth DR is a transcription placeholder -- genuinely unclear handwriting, not confirmed against any real brand. Ultrafast 30 confirmed as Paracetamol 325mg + Tramadol 37.5mg -- a genuine combination containing an opioid (tramadol); correctly left uncoded rather than coded under paracetamol alone, since that would hide the opioid component entirely. Gabapin NT's second ingredient (likely nortriptyline, based on the 'NT' naming convention used by this brand family) was not independently confirmed this session -- treat as a probable combination pending verification, not yet coded."
+}

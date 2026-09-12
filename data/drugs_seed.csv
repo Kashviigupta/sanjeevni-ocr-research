@@ -1,0 +1,48 @@
+generic,brands,system,code,display,class
+glimepiride,Amaryl|Glimestar|Zoryl|Glypride,RxNorm,25789,Glimepiride,sulfonylurea antidiabetic
+insulin glargine,Lantus|Basalog|Glaritus,RxNorm,274783,Insulin glargine,long-acting insulin
+amlodipine,Amlong|Amlodac|Stamlo|Amlopres,RxNorm,17767,Amlodipine,calcium channel blocker
+telmisartan,Telma|Telsar|Tazloc|Telvas,RxNorm,73494,Telmisartan,angiotensin receptor blocker
+losartan,Losar|Repace|Covance,RxNorm,52175,Losartan,angiotensin receptor blocker
+enalapril,Envas|Enam|Nuril,RxNorm,3827,Enalapril,ACE inhibitor
+atenolol,Aten|Tenormin|Betacard,RxNorm,1202,Atenolol,beta blocker
+metoprolol,Metolar|Betaloc|Starpress,RxNorm,6918,Metoprolol,beta blocker
+atorvastatin,Atorva|Lipvas|Storvas|Aztor,RxNorm,83367,Atorvastatin,statin
+rosuvastatin,Rosuvas|Crestor|Novastat,RxNorm,301542,Rosuvastatin,statin
+aspirin,Ecosprin|Disprin|Aspicot,RxNorm,1191,Aspirin,antiplatelet
+clopidogrel,Clopilet|Plavix|Deplatt,RxNorm,32968,Clopidogrel,antiplatelet
+warfarin,Warf|Uniwarfin|Sofarin,RxNorm,11289,Warfarin,anticoagulant
+paracetamol,Crocin|Dolo|Calpol|Metacin|Pacimol|Imol,RxNorm,161,Acetaminophen,analgesic antipyreticibuprofen,Brufen|Combiflam|Ibugesic,RxNorm,5640,Ibuprofen,NSAID
+diclofenac,Voveran|Dicloran|Voltaren,RxNorm,3355,Diclofenac,NSAID
+amoxicillin,Mox|Novamox|Amoxil,RxNorm,723,Amoxicillin,penicillin antibiotic
+azithromycin,Azithral|Azee|Zithromax,RxNorm,18631,Azithromycin,macrolide antibiotic
+ciprofloxacin,Ciplox|Cifran|Ciprobid,RxNorm,2551,Ciprofloxacin,fluoroquinolone antibiotic
+levofloxacin,Levoflox|Levotas|Glevo,RxNorm,82122,Levofloxacin,fluoroquinolone antibiotic
+pantoprazole,Pantocid|Pan|Pantop,RxNorm,40790,Pantoprazole,proton pump inhibitor
+omeprazole,Omez|Ocid|Omecip,RxNorm,7646,Omeprazole,proton pump inhibitor
+ranitidine,Zinetac|Rantac|Aciloc,RxNorm,9143,Ranitidine,H2 receptor antagonist
+levothyroxine,Thyronorm|Eltroxin|Thyrox,RxNorm,10582,Levothyroxine,thyroid hormone
+salbutamol,Asthalin|Ventorlin|Levolin,RxNorm,435,Albuterol,short-acting beta agonist
+montelukast,Montair|Montek|Romilast,RxNorm,88249,Montelukast,leukotriene antagonist
+cetirizine,Cetzine|Alerid|Okacet,RxNorm,20610,Cetirizine,antihistamine
+prednisolone,Wysolone|Omnacortil|Predmet,RxNorm,8638,Prednisolone,corticosteroid
+tramadol,Ultracet|Tramazac|Contramal,RxNorm,10689,Tramadol,opioid analgesic
+metronidazole,Flagyl|Metrogyl,RxNorm,6922,Metronidazole,nitroimidazole antibiotic
+doxycycline,Doxy|Novadox|Doxt,RxNorm,3640,Doxycycline,tetracycline antibiotic
+domperidone,Domstal|Vomistop,RxNorm,3626,Domperidone,prokinetic antiemetic
+ondansetron,Emeset|Ondem,RxNorm,26225,Ondansetron,5-HT3 antagonist antiemetic
+levocetirizine,Levocet|Xyzal,RxNorm,356887,Levocetirizine,antihistamine
+dexamethasone,Decdan|Wymesone,RxNorm,3264,Dexamethasone,corticosteroid
+aceclofenac,Zerodol|Hifenac,RxNorm,16689,Aceclofenac,NSAID
+cefixime,Taxim-O|Zifi|Mahacef,RxNorm,25033,cefixime,cephalosporin antibiotic
+cefuroxime,Ceftum|Supacef,RxNorm,2194,cefuroxime,cephalosporin antibiotic
+ceftriaxone,Monocef|Oframax,RxNorm,2193,ceftriaxone,cephalosporin antibiotic
+hydralazine,Nepresol,RxNorm,5470,hydralazine,vasodilator
+clonidine,Arkamin,RxNorm,2599,clonidine,central antihypertensive
+prazosin,Minipress,RxNorm,8629,prazosin,alpha blocker
+rabeprazole,Rabemac|Razo|Rablet,RxNorm,114979,Rabeprazole,proton pump inhibitor
+cefpodoxime,Zipod|Cepodem|Wollypod,RxNorm,20489,Cefpodoxime,cephalosporin antibiotic
+metformin,Glycomet|Glucophage|Obimet|Carbophage|Walaphage|Glycomet SR,RxNorm,6809,Metformin,biguanide antidiabetic
+loperamide,Dyril,RxNorm,6535,Loperamide,antidiarrheal
+heparin,Thrombophob,RxNorm,5224,Heparin,anticoagulant (topical)
+tizanidine,Relentus,RxNorm,57258,Tizanidine,muscle relaxant

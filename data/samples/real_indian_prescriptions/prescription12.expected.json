@@ -1,0 +1,7 @@
+{
+  "source": "Unlabelled clinic slip",
+  "document_type": "prescription",
+  "diagnoses": ["Migraine", "Neck pain", "History of hypothyroidism"],
+  "drugs": ["Tolperitas-D 150", "Pan 40"],
+  "notes": "Tolperitas-D confirmed as a genuine combination product -- the '-D' suffix consistently denotes Tolperisone + Diclofenac (occasionally + Paracetamol) across multiple Indian brands using this naming convention. Correctly left uncoded rather than assigned to tolperisone alone, since that would hide the NSAID component. Pan 40 (pantoprazole) already present in the terminology table from earlier sessions."
+}

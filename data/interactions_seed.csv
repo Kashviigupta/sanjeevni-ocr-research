@@ -1,0 +1,26 @@
+drug_a,drug_b,severity,description,source
+warfarin,aspirin,major,Both increase bleeding risk. Combined use markedly raises the chance of gastrointestinal and intracranial bleeding.,curated-table-v1
+warfarin,ibuprofen,major,NSAIDs displace warfarin from protein binding and irritate the gastric lining - serious bleeding risk.,curated-table-v1
+warfarin,diclofenac,major,NSAID plus anticoagulant substantially increases bleeding risk.,curated-table-v1
+warfarin,azithromycin,moderate,Macrolides can raise INR. Monitor INR closely if started together.,curated-table-v1
+clopidogrel,omeprazole,major,Omeprazole inhibits CYP2C19 and reduces clopidogrel activation - less antiplatelet protection.,curated-table-v1
+clopidogrel,aspirin,moderate,Dual antiplatelet therapy is often intentional but raises bleeding risk - confirm it is deliberate.,curated-table-v1
+metformin,ciprofloxacin,moderate,Fluoroquinolones can disturb glucose control in either direction. Monitor blood sugar.,curated-table-v1
+metformin,prednisolone,moderate,Corticosteroids raise blood glucose and can undo antidiabetic control.,curated-table-v1
+glimepiride,ciprofloxacin,moderate,Increased risk of hypoglycaemia when a fluoroquinolone is added to a sulfonylurea.,curated-table-v1
+glimepiride,aspirin,minor,High-dose salicylates can potentiate the glucose-lowering effect.,curated-table-v1
+atorvastatin,azithromycin,moderate,Macrolides raise statin levels and the risk of muscle injury (myopathy).,curated-table-v1
+atorvastatin,clopidogrel,minor,Shared CYP3A4 metabolism - clinically minor for most patients.,curated-table-v1
+telmisartan,ibuprofen,moderate,NSAIDs blunt the antihypertensive effect and can impair renal function together.,curated-table-v1
+enalapril,ibuprofen,moderate,NSAID plus ACE inhibitor reduces blood pressure control and stresses the kidneys.,curated-table-v1
+enalapril,losartan,major,Dual renin-angiotensin blockade increases hyperkalaemia and renal failure risk without added benefit.,curated-table-v1
+atenolol,salbutamol,major,Non-selective beta blockade opposes the bronchodilator - can trigger bronchospasm in asthma.,curated-table-v1
+metoprolol,salbutamol,moderate,Beta blockade can reduce bronchodilator effectiveness. Monitor asthmatic patients.,curated-table-v1
+levothyroxine,pantoprazole,moderate,Reduced gastric acid lowers levothyroxine absorption. Separate the doses by four hours.,curated-table-v1
+levothyroxine,omeprazole,moderate,Reduced gastric acid lowers levothyroxine absorption. Separate the doses.,curated-table-v1
+tramadol,cetirizine,moderate,Additive sedation and drowsiness. Warn against driving.,curated-table-v1
+tramadol,azithromycin,moderate,Both can prolong the QT interval - avoid in patients with cardiac risk.,curated-table-v1
+ibuprofen,diclofenac,major,Two NSAIDs together give no extra benefit and multiply gastric and renal toxicity.,curated-table-v1
+paracetamol,warfarin,moderate,Regular high-dose paracetamol can raise INR. Occasional use is fine.,curated-table-v1
+prednisolone,ibuprofen,moderate,Corticosteroid plus NSAID markedly raises the risk of peptic ulcer.,curated-table-v1
+prednisolone,aspirin,moderate,Increased gastrointestinal ulceration risk when combined.,curated-table-v1

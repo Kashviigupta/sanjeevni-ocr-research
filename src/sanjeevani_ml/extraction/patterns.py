@@ -347,7 +347,26 @@ DRUG_LINE_RE: Final[re.Pattern[str]] = re.compile(
     )
     \.?\s+
     (?P<name> [A-Za-z\u0900-\u097F][A-Za-z0-9\u0900-\u097F'\- ]{1,48}? )
-    (?=\s*(?:\d|$))                          # name ends where strength/dose starts
+    (?=\s*(?:\d|\(|$))                      # name ends where strength/dose starts
+                                              # (bare digit, a parenthesised
+                                              # strength like "(10/150)", or
+                                              # end of line)
+    (?P<rest> .* )$
+    """,
+    re.X | re.M | re.I,
+)
+
+# Some items are written name-FIRST, form-second -- "Electral powder" --
+# rather than the usual "Tab Glycomet". A real Indian OTC convention for a
+# handful of common items, kept as a SEPARATE pattern rather than folded
+# into DRUG_LINE_RE, since merging them risks one regex guessing word order.
+DRUG_LINE_REVERSED_RE: Final[re.Pattern[str]] = re.compile(
+    r"""
+    ^\s*
+    (?P<name> [A-Za-z][A-Za-z\- ]{1,30}? )
+    \s+
+    (?P<form> powder | sachet | solution )
+    \s*
     (?P<rest> .* )$
     """,
     re.X | re.M | re.I,

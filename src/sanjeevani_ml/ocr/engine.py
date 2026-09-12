@@ -332,16 +332,28 @@ def _run_vision_ocr_gemini(data: bytes, media_type: str) -> OcrResult:
     from google import genai
 
     client = genai.Client(api_key=settings.gemini_api_key)
-    response = client.models.generate_content(
-        model=settings.gemini_model,
-        contents=[
-            genai.types.Part.from_bytes(data=data, mime_type=media_type),
-            "Transcribe every word of text visible in this image exactly as written. "
-            "Plain transcription only - no interpretation, no dosage reasoning, no "
-            "corrections, no summary. If handwriting is illegible, write [illegible] "
-            "in its place rather than guessing.",
-        ],
-    )
+    last_exc = None
+    for attempt in range(3):
+        try:
+            response = client.models.generate_content(
+                model=settings.gemini_model,
+                contents=[
+                    genai.types.Part.from_bytes(data=data, mime_type=media_type),
+                    "Transcribe every word of text visible in this image exactly as written. "
+                    "Plain transcription only - no interpretation, no dosage reasoning, no "
+                    "corrections, no summary. If handwriting is illegible, write [illegible] "
+                    "in its place rather than guessing.",
+                ],
+            )
+            break
+        except Exception as exc:  # noqa: BLE001
+            last_exc = exc
+            is_503 = "503" in str(exc) or "UNAVAILABLE" in str(exc)
+            if is_503 and attempt < 2:
+                import time
+                time.sleep(2 * (attempt + 1))  # 2s, then 4s
+                continue
+            raise
     text = (response.text or "").strip()
     return OcrResult(
         text=text,

@@ -1,0 +1,21 @@
+term,synonyms,system,code,display
+Type 2 diabetes mellitus,T2DM|Diabetes type 2|NIDDM|Diabetes mellitus type 2|Sugar,SNOMED,44054006,Type 2 diabetes mellitus
+Type 1 diabetes mellitus,T1DM|IDDM|Diabetes type 1,SNOMED,46635009,Type 1 diabetes mellitus
+Essential hypertension,Hypertension|HTN|High blood pressure|BP high,SNOMED,59621000,Essential hypertension
+Bronchial asthma,Asthma,SNOMED,195967001,Asthma
+Chronic obstructive pulmonary disease,COPD,SNOMED,13645005,Chronic obstructive lung disease
+Ischaemic heart disease,IHD|Coronary artery disease|CAD,SNOMED,414545008,Ischemic heart disease
+Hypothyroidism,Underactive thyroid|Thyroid low,SNOMED,40930008,Hypothyroidism
+Anaemia,Anemia|Low haemoglobin|Low hemoglobin,SNOMED,271737000,Anemia
+Pulmonary tuberculosis,TB|Tuberculosis|Koch disease,SNOMED,154283005,Pulmonary tuberculosis
+Chronic kidney disease,CKD|Renal failure chronic,SNOMED,709044004,Chronic kidney disease
+Dengue fever,Dengue,SNOMED,38362002,Dengue
+Malaria,,SNOMED,61462000,Malaria
+Acute gastroenteritis,Gastroenteritis|Loose motions|Diarrhoea,SNOMED,25374005,Gastroenteritis
+Urinary tract infection,UTI,SNOMED,68566005,Urinary tract infectious disease
+Dyslipidaemia,High cholesterol|Hyperlipidaemia|Hyperlipidemia,SNOMED,370992007,Dyslipidemia
+Obesity,,SNOMED,414916001,Obesity
+Osteoarthritis,OA|Joint pain degenerative,SNOMED,396275006,Osteoarthritis
+Migraine,,SNOMED,37796009,Migraine
+Peptic ulcer disease,PUD|Gastric ulcer|Acidity,SNOMED,13200003,Peptic ulcer
+Vitamin D deficiency,Low vitamin D,SNOMED,34713006,Vitamin D deficiency

@@ -1,0 +1,7 @@
+{
+  "source": "Unlabelled clinic slip",
+  "document_type": "prescription",
+  "diagnoses": ["Acute Nasopharyngitis"],
+  "drugs": ["Cetil 500", "X_ARA BD", "Allegra M 120", "BYDAREM-D"],
+  "notes": "X_ARA BD and BYDAREM-D are transcription placeholders -- genuinely unclear handwriting, not confirmed against any real brand. Do not treat these two names as verified ground truth; they exist here only so the image is not silently missing entries. Allegra M 120 (Fexofenadine 120mg + Montelukast 10mg) is a confirmed combination drug -- correctly left uncoded in the terminology table rather than assigned to one ingredient."
+}

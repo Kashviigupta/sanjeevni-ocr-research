@@ -1,0 +1,7 @@
+{
+  "source": "Kokilaben Dhirubhai Ambani Hospital Pharmacy",
+  "document_type": "prescription",
+  "diagnoses": ["Post-LSCS, on Thyronorm for hypothyroidism"],
+  "drugs": ["Regestrone CR 15mg", "Menopace 100", "Dolo 650", "Alprax 0.25"],
+  "notes": "Menopace 100 confirmed as a multi-nutrient menopause-support supplement (22+ vitamins/minerals, formulation varies) -- not a single drug, correctly left uncoded. Dolo 650 (paracetamol) already present in the terminology table from earlier sessions. Alprax 0.25 (alprazolam) independently confirmed by the pharmacy's own supplied-stamp box on the same page, which explicitly lists 'Alprax 0.25' -- a rare case where the document itself cross-verifies the handwritten Rx."
+}

@@ -1,0 +1,7 @@
+{
+  "source": "Unlabelled clinic slip (rotated photo)",
+  "document_type": "prescription",
+  "diagnoses": ["Joint pain"],
+  "drugs": ["Etoricoxib 120mg", "Quogress", "Shelcal joint", "Shelcal-150"],
+  "notes": "Quogress confirmed as a multi-ingredient nutraceutical supplement (CoQ10 + Omega-3 + Vitamin E, formulation varies by SKU) -- not a single drug, correctly left uncoded. Shelcal joint confirmed as a multi-ingredient joint-health supplement (calcium + collagen + vitamins + minerals) -- correctly left uncoded. Shelcal-150 is the plain calcium/vitamin-D3 supplement line -- also left uncoded as a nutraceutical, not a coded pharmaceutical ingredient."
+}

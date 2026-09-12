@@ -1,0 +1,31 @@
+term,synonyms,system,code,display,unit
+Fasting blood sugar,FBS|Fasting glucose|Glucose fasting|Blood sugar fasting|Sugar F,LOINC,1558-6,Fasting glucose [Mass/volume] in Serum or Plasma,mg/dL
+Post prandial blood sugar,PPBS|PP sugar|Glucose PP|Post prandial glucose,LOINC,1521-4,Glucose [Mass/volume] in Serum or Plasma --2 hours post meal,mg/dL
+Random blood sugar,RBS|Random glucose|Blood sugar random,LOINC,2345-7,Glucose [Mass/volume] in Serum or Plasma,mg/dL
+Glycated haemoglobin,HbA1c|HBA1C|Glycosylated hemoglobin|A1c,LOINC,4548-4,Hemoglobin A1c/Hemoglobin.total in Blood,%
+Haemoglobin,Hb|HGB|Hemoglobin,LOINC,718-7,Hemoglobin [Mass/volume] in Blood,g/dL
+Total leucocyte count,TLC|WBC|White blood cell count|Total WBC,LOINC,6690-2,Leukocytes [#/volume] in Blood by Automated count,cells/cumm
+Platelet count,Platelets|PLT,LOINC,777-3,Platelets [#/volume] in Blood by Automated count,lakhs/cumm
+Total cholesterol,Cholesterol|Cholesterol total|Serum cholesterol,LOINC,2093-3,Cholesterol [Mass/volume] in Serum or Plasma,mg/dL
+HDL cholesterol,HDL|HDL-C|High density lipoprotein,LOINC,2085-9,Cholesterol in HDL [Mass/volume] in Serum or Plasma,mg/dL
+LDL cholesterol,LDL|LDL-C|Low density lipoprotein,LOINC,13457-7,Cholesterol in LDL [Mass/volume] in Serum or Plasma by calculation,mg/dL
+Triglycerides,TG|Serum triglycerides,LOINC,2571-8,Triglyceride [Mass/volume] in Serum or Plasma,mg/dL
+Serum creatinine,Creatinine|S. Creatinine,LOINC,2160-0,Creatinine [Mass/volume] in Serum or Plasma,mg/dL
+Blood urea,Urea|BUN|Blood urea nitrogen,LOINC,3094-0,Urea nitrogen [Mass/volume] in Serum or Plasma,mg/dL
+Serum uric acid,Uric acid|S. Uric acid,LOINC,3084-1,Urate [Mass/volume] in Serum or Plasma,mg/dL
+Total bilirubin,Bilirubin|Bilirubin total|T. Bilirubin,LOINC,1975-2,Bilirubin.total [Mass/volume] in Serum or Plasma,mg/dL
+SGPT,ALT|Alanine aminotransferase|SGPT ALT,LOINC,1742-6,Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma,U/L
+SGOT,AST|Aspartate aminotransferase|SGOT AST,LOINC,1920-8,Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma,U/L
+Serum sodium,Sodium|Na|Na+,LOINC,2951-2,Sodium [Moles/volume] in Serum or Plasma,mEq/L
+Serum potassium,Potassium|K|K+,LOINC,2823-3,Potassium [Moles/volume] in Serum or Plasma,mEq/L
+TSH,Thyroid stimulating hormone|Thyrotropin,LOINC,3016-3,Thyrotropin [Units/volume] in Serum or Plasma,mIU/L
+Vitamin D,25-OH Vitamin D|Vitamin D3|25 hydroxy vitamin D,LOINC,14635-7,25-hydroxyvitamin D3 [Mass/volume] in Serum or Plasma,ng/mL
+Vitamin B12,B12|Cobalamin,LOINC,2132-9,Cobalamin (Vitamin B12) [Mass/volume] in Serum or Plasma,pg/mL
+Serum calcium,Calcium|Ca,LOINC,17861-6,Calcium [Mass/volume] in Serum or Plasma,mg/dL
+ESR,Erythrocyte sedimentation rate,LOINC,4537-7,Erythrocyte sedimentation rate by Westergren,mm/hr
+C-reactive protein,CRP,LOINC,1988-5,C reactive protein [Mass/volume] in Serum or Plasma,mg/L
+Blood pressure,BP|Blood pressure systolic and diastolic,LOINC,85354-9,Blood pressure panel with all children optional,mmHg
+Heart rate,Pulse|Pulse rate|PR,LOINC,8867-4,Heart rate,beats/min
+Body temperature,Temperature|Temp,LOINC,8310-5,Body temperature,degF
+Oxygen saturation,SpO2|SPO2|O2 saturation,LOINC,59408-5,Oxygen saturation in Arterial blood by Pulse oximetry,%
+Body weight,Weight|Wt,LOINC,29463-7,Body weight,kg

@@ -33,6 +33,7 @@ from sanjeevani_ml.extraction.patterns import (
     DIAGNOSIS_LINE_RE,
     DOSE_SLOT_RE,
     DRUG_LINE_RE,
+    DRUG_LINE_REVERSED_RE,
     DURATION_RE,
     FACILITY_RE,
     FREQUENCY_RE,
@@ -368,6 +369,21 @@ def _extract_diagnoses(text: str, ocr_mean: float) -> list[ExtractedEntity]:
 
 def _extract_drug_lines(text: str, ocr_mean: float) -> list[ExtractedEntity]:
     entities: list[ExtractedEntity] = []
+    # Two passes: the usual "Tab Glycomet 500mg" order, then the reversed
+    # "Electral powder" order some common OTC items use. Two independent
+    # loops rather than one merged pattern, per the reasoning in patterns.py.
+    for match in DRUG_LINE_REVERSED_RE.finditer(text):
+        name = match.group("name").strip()
+        raw_line = match.group(0).strip()
+        entities.append(
+            ExtractedEntity(
+                kind="medication",
+                text=raw_line,
+                value=name,
+                unit=None,
+                confidence=_confidence(ocr_mean, "drug_line"),
+            )
+        )
     for match in DRUG_LINE_RE.finditer(text):
         name = match.group("name").strip()
         rest = match.group("rest")
