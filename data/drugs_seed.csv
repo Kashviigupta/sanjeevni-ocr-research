@@ -12,7 +12,8 @@ rosuvastatin,Rosuvas|Crestor|Novastat,RxNorm,301542,Rosuvastatin,statin
 aspirin,Ecosprin|Disprin|Aspicot,RxNorm,1191,Aspirin,antiplatelet
 clopidogrel,Clopilet|Plavix|Deplatt,RxNorm,32968,Clopidogrel,antiplatelet
 warfarin,Warf|Uniwarfin|Sofarin,RxNorm,11289,Warfarin,anticoagulant
-paracetamol,Crocin|Dolo|Calpol|Metacin|Pacimol|Imol,RxNorm,161,Acetaminophen,analgesic antipyreticibuprofen,Brufen|Combiflam|Ibugesic,RxNorm,5640,Ibuprofen,NSAID
+paracetamol,Crocin|Dolo|Calpol|Metacin|Pacimol|Imol,RxNorm,161,Acetaminophen,analgesic antipyretic
+ibuprofen,Brufen|Combiflam|Ibugesic,RxNorm,5640,Ibuprofen,NSAID
 diclofenac,Voveran|Dicloran|Voltaren,RxNorm,3355,Diclofenac,NSAID
 amoxicillin,Mox|Novamox|Amoxil,RxNorm,723,Amoxicillin,penicillin antibiotic
 azithromycin,Azithral|Azee|Zithromax,RxNorm,18631,Azithromycin,macrolide antibiotic
@@ -46,3 +47,9 @@ metformin,Glycomet|Glucophage|Obimet|Carbophage|Walaphage|Glycomet SR,RxNorm,680
 loperamide,Dyril,RxNorm,6535,Loperamide,antidiarrheal
 heparin,Thrombophob,RxNorm,5224,Heparin,anticoagulant (topical)
 tizanidine,Relentus,RxNorm,57258,Tizanidine,muscle relaxant
+indomethacin,Inmecin,RxNorm,5781,Indomethacin,NSAID
+alprazolam,Alprax,RxNorm,596,Alprazolam,benzodiazepine
+etoricoxib,Etoricoxib,RxNorm,307296,Etoricoxib,COX-2 inhibitor NSAID
+cefadroxil,Cetil,RxNorm,2177,Cefadroxil,cephalosporin antibiotic
+oxcarbazepine,Oxetol,RxNorm,32624,Oxcarbazepine,anticonvulsant
+norethindrone,Regestrone,RxNorm,7514,Norethindrone,progestin hormone

@@ -21,7 +21,9 @@ Precision needs exactly that: a real predicted set, not a text search.
 from __future__ import annotations
 
 import difflib
+import hashlib
 import json
+import logging
 import sys
 from pathlib import Path
 
@@ -30,6 +32,69 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 from sanjeevani_ml.ocr import engine as ocr_engine
 from sanjeevani_ml.extraction.structurer import structure
 from sanjeevani_ml.terminology.mapper import code_result
+from sanjeevani_ml.schemas import OcrResult
+
+#: Vision OCR (Gemini) is rate-limited to a small free-tier daily quota. Without
+#: this cache, every re-run of the scorer over the same 14 fixed images burns
+#: quota re-transcribing images whose text can't have changed, so a handful of
+#: scorer runs while iterating on regex/drug-list changes exhausts the day's
+#: budget before the images that actually need a fresh call get one. Keyed by
+#: image content hash, not filename, so a changed image is never served stale
+#: text.
+_CACHE_DIR = (
+    Path(__file__).resolve().parents[1]
+    / "data" / "samples" / "real_indian_prescriptions" / ".ocr_cache"
+)
+
+
+class _VisionFallbackFailureDetector(logging.Handler):
+    """Catches `ocr_document`'s own "vision fallback failed" warning.
+
+    `ocr_document` swallows a failed vision call internally (a failed vision
+    call must never crash the request) and returns the Tesseract result
+    unchanged, with no marker on the OcrResult itself saying escalation was
+    attempted and lost. Re-deriving that decision here (mean confidence OR
+    worst-line confidence, matching `ocr_document`'s own two-signal check)
+    would duplicate and risk drifting from the real logic; listening for the
+    log line it already emits is the only way to know for certain from
+    outside the module.
+    """
+
+    def __init__(self) -> None:
+        super().__init__()
+        self.failed = False
+
+    def emit(self, record: logging.LogRecord) -> None:
+        if "vision fallback failed" in record.getMessage():
+            self.failed = True
+
+
+def _cached_ocr_document(data: bytes, media_type: str) -> OcrResult:
+    _CACHE_DIR.mkdir(parents=True, exist_ok=True)
+    key = hashlib.sha256(data).hexdigest()
+    cache_file = _CACHE_DIR / f"{key}.json"
+
+    if cache_file.exists():
+        cached = json.loads(cache_file.read_text(encoding="utf-8"))
+        return OcrResult(**cached)
+
+    detector = _VisionFallbackFailureDetector()
+    engine_logger = logging.getLogger("sanjeevani_ml.ocr.engine")
+    engine_logger.addHandler(detector)
+    try:
+        result = ocr_engine.ocr_document(data, media_type=media_type)
+    finally:
+        engine_logger.removeHandler(detector)
+
+    # A low-confidence Tesseract result that needed vision escalation but
+    # didn't get it (429 quota, network, etc.) must NOT be cached -- caching
+    # it would permanently freeze a bad transcription and stop a later run
+    # (once quota resets) from ever retrying vision for this image.
+    if detector.failed:
+        return result
+
+    cache_file.write_text(json.dumps(result.model_dump()), encoding="utf-8")
+    return result
 
 #: Same fuzzy-match philosophy as the earlier scorer, kept identical so a
 #: predicted name that's a close but imperfect transcription (e.g.
@@ -108,7 +173,7 @@ def score_one(image_path: Path, expected: dict) -> dict:
     with open(image_path, "rb") as fh:
         data = fh.read()
 
-    ocr_result = ocr_engine.ocr_document(data, media_type="image/jpeg")
+    ocr_result = _cached_ocr_document(data, media_type="image/jpeg")
     result = structure(ocr_result, hint=None)
     result = code_result(result)
 

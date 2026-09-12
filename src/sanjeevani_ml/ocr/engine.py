@@ -348,8 +348,15 @@ def _run_vision_ocr_gemini(data: bytes, media_type: str) -> OcrResult:
             break
         except Exception as exc:  # noqa: BLE001
             last_exc = exc
-            is_503 = "503" in str(exc) or "UNAVAILABLE" in str(exc)
-            if is_503 and attempt < 2:
+            msg = str(exc)
+            is_503 = "503" in msg or "UNAVAILABLE" in msg
+            # A 429 is only worth retrying when it's a transient per-minute rate
+            # limit -- retrying a daily quota error (the common free-tier case)
+            # just wastes the retry budget sleeping on a cap that won't lift
+            # until tomorrow, so check for the daily-limit wording explicitly.
+            is_429 = "429" in msg or "RESOURCE_EXHAUSTED" in msg
+            is_daily_quota = is_429 and "PerDay" in msg
+            if (is_503 or (is_429 and not is_daily_quota)) and attempt < 2:
                 import time
                 time.sleep(2 * (attempt + 1))  # 2s, then 4s
                 continue

@@ -102,6 +102,14 @@ _DASH_VARIANTS: Final[dict[int, str]] = {
 
 _WHITESPACE_RUN_RE: Final[re.Pattern[str]] = re.compile(r"[ \t\u00a0]+")
 
+# A vision model told to transcribe "plain text only" sometimes still wraps
+# words in Markdown anyway (`` `Tab Menopace` `` / ``**Tab Menopace**``). No
+# prescription ever contains a literal backtick or asterisk, so stripping
+# them is always safe -- and necessary, since a name ending in one of these
+# breaks DRUG_LINE_RE's name-boundary lookahead (it isn't a digit, "(", or
+# end of line) and silently drops the whole line.
+_MARKDOWN_ARTIFACTS: Final[dict[int, None]] = {ord(ch): None for ch in "`*"}
+
 
 def normalize_text(text: str) -> str:
     """Fold a raw OCR string into the character space the patterns expect.
@@ -121,7 +129,7 @@ def normalize_text(text: str) -> str:
         The normalised text. Never logged — it is PHI.
     """
     folded = unicodedata.normalize("NFKC", text)
-    folded = folded.translate(_DEVANAGARI_DIGITS).translate(_DASH_VARIANTS)
+    folded = folded.translate(_DEVANAGARI_DIGITS).translate(_DASH_VARIANTS).translate(_MARKDOWN_ARTIFACTS)
     return "\n".join(_WHITESPACE_RUN_RE.sub(" ", line).strip() for line in folded.splitlines())
 
 
@@ -339,18 +347,27 @@ STRENGTH_RE: Final[re.Pattern[str]] = re.compile(
 DRUG_LINE_RE: Final[re.Pattern[str]] = re.compile(
     r"""
     ^\s*
-    (?: \d{1,2} [.)] \s* )?                  # optional list numbering "1." / "2)"
+    (?: [^\sA-Za-zऀ-ॿ]+ [ \t]* )*   # any bullet/numbering junk before
+                                               # the form -- "1.", "2)", "(1)",
+                                               # "@", "#", ". ", "- ", circled
+                                               # digits ("①"), or a vision model's
+                                               # own markdown bullets ("*   \-").
+                                               # Horizontal whitespace only
+                                               # (never \n) so this can't bleed
+                                               # across a blank line and glue an
+                                               # unrelated header onto the drug.
     (?P<form>
-        Tab | Tabs | Tablet | Cap | Caps | Capsule | Syp | Syrup | Susp |
+        Tab | Tabs | Tablet | TS | T | Cap | Caps | Capsule | Syp | Syrup | Susp |
         Inj | Injection | Oint | Ointment | Drops? | Gel | Cream | Powder |
         गोली | कैप्सूल | सिरप | इंजेक्शन
     )
     \.?\s+
     (?P<name> [A-Za-z\u0900-\u097F][A-Za-z0-9\u0900-\u097F'\- ]{1,48}? )
-    (?=\s*(?:\d|\(|$))                      # name ends where strength/dose starts
+    (?=\s*(?:\d|\(|\[|$))                   # name ends where strength/dose starts
                                               # (bare digit, a parenthesised
-                                              # strength like "(10/150)", or
-                                              # end of line)
+                                              # strength like "(10/150)", a
+                                              # vision model's "[illegible]"
+                                              # marker, or end of line)
     (?P<rest> .* )$
     """,
     re.X | re.M | re.I,
@@ -363,9 +380,12 @@ DRUG_LINE_RE: Final[re.Pattern[str]] = re.compile(
 DRUG_LINE_REVERSED_RE: Final[re.Pattern[str]] = re.compile(
     r"""
     ^\s*
+    (?: [^\sA-Za-zऀ-ॿ]+ [ \t]* )*   # bullet/arrow junk before the
+                                               # name, same reasoning as
+                                               # DRUG_LINE_RE -- e.g. "-> Xyz"
     (?P<name> [A-Za-z][A-Za-z\- ]{1,30}? )
     \s+
-    (?P<form> powder | sachet | solution )
+    (?P<form> powder | sachet | solution | gel )
     \s*
     (?P<rest> .* )$
     """,
